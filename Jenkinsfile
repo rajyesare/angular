@@ -1,13 +1,29 @@
 pipeline {
     agent any
-
+    /*
     stages {
-        stage('Build') {
+	stage('Remove Docker Containers/Images') {
+		
             steps {
-                echo "Hello World"
-                
-                    echo "Multiline shell steps works too"
-                
+			sh 'docker stop 1e5d1f51021d'
+			sh 'docker rm 1e5d1f51021d'
+			sh 'docker rmi e559a4bf5954'			
+		}
+	}
+    */
+	stage('Build Docker Image') {
+            steps {
+                script {
+                    def dockerfile = 'Dockerfile'
+                    docker.build('angular-image:latest', "-f ${dockerfile} .")
+                }
+            }
+        }
+        stage('Run Docker Container') {
+            steps {
+                script {
+                    docker.image('angular-image:latest').run('-p 8084:80')
+                }
             }
         }
     }
