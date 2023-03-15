@@ -22,7 +22,7 @@ pipeline {
         stage('Run Docker Container') {
             steps {
                 script {
-                    docker.image('angular-image:latest').run('-p 8084:80')
+                    docker.image('angular-image:latest').run('-p 4200:80')
                 }
             }
         }
