@@ -17,7 +17,7 @@ COPY ./Angular .
 RUN npm run build --prod
 
 # Expose the port on which the application will run
-EXPOSE 8084
+EXPOSE 4200
 
 # Start the application
 CMD ["npm", "run", "start"]
