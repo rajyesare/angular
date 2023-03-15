@@ -5,13 +5,13 @@ FROM node:14-alpine
 WORKDIR /app
 
 # Copy the package.json and package-lock.json files to the working directory
-COPY package*.json ./
+COPY ./Angular/package*.json ./
 
 # Install the project dependencies
 RUN npm install
 
 # Copy the rest of the application code to the working directory
-COPY . .
+COPY ./Angular .
 
 # Build the application
 RUN npm run build --prod
