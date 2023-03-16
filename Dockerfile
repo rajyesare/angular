@@ -1,9 +1,10 @@
 ### STAGE 1: Build ###
 FROM node:14-alpine AS build
 WORKDIR /app
-COPY ./Angular/package*.json ./
-RUN npm install
+###COPY ./Angular/package*.json ./
 COPY ./Angular .
+RUN npm install
+###COPY ./Angular .
 RUN npm run build --prod
 ### STAGE 2: Run ###
 FROM nginx:1.17.1-alpine
