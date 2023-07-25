@@ -24,3 +24,5 @@ jobs:
       run: echo "VS Code change"
     - name: VSCode2
       run: echo "VS Code change 2"
+    - name: VSCode3
+      run: echo "VS Code change 3 in test1 branch"
