@@ -20,3 +20,5 @@ jobs:
       uses: actions/checkout@v3
     - name: After Code retrieval
       run: echo "Code retrieved"
+    - name: VSCode
+      run: echo "VS Code change"
