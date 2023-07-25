@@ -22,3 +22,5 @@ jobs:
       run: echo "Code retrieved"
     - name: VSCode
       run: echo "VS Code change"
+    - name: VSCode2
+      run: echo "VS Code change 2"

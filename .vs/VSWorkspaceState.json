@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\.github",
+    "\\.github\\workflows"
   ],
-  "SelectedNode": "\\D:\\Study\\GitRepos\\angular",
+  "SelectedNode": "\\.github\\workflows\\node.js.yml",
   "PreviewInSolutionExplorer": false
 }
